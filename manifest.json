@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Robotics Job Finder",
+  "version": "1.0",
+  "description": "Find robotics jobs on company career pages",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["kanban.html", "kanban.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Robotics Job Finder</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f0f5ff;
+    }
+    h2 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    #toggleButton {
+      background-color: #2ecc71;
+    }
+    #toggleButton:hover {
+      background-color: #27ae60;
+    }
+    #toggleButton.disabled {
+      background-color: #e74c3c;
+    }
+    #toggleButton.disabled:hover {
+      background-color: #c0392b;
+    }
+    #kanbanLink {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #3498db;
+      text-decoration: none;
+    }
+    #kanbanLink:hover {
+      text-decoration: underline;
+    }
+    #clearAllButton {
+      background-color: #e74c3c;
+      margin-top: 10px;
+    }
+    #clearAllButton:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <h2>Robotics Job Finder</h2>
+  <div class="input-group">
+    <input type="text" id="keywordsInput" placeholder="Enter keywords (comma-separated)">
+    <button id="updateKeywordsButton">Update Keywords</button>
+  </div>
+  <button id="toggleButton">Enable Extension</button>
+  <a href="#" id="kanbanLink">Open Kanban Board</a>
+  <button id="clearAllButton">Clear All Jobs</button>
+  <script src="popup.js"></script>
+</body>
+</html>
